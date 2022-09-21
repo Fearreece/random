@@ -4,7 +4,7 @@ pipeline{
         stage("Building stage"){
             steps{
                 sh '''
-                ssh -i /var/lib/jenkins/docker.pem/ -t -o StrictHostKeyChecking=no ubuntu@ec2-54-224-221-143.compute-1.amazonaws.com
+                sudo ssh -i /var/lib/jenkins/docker.pem/ -t -o StrictHostKeyChecking=no ubuntu@ec2-54-224-221-143.compute-1.amazonaws.com
                 sudo apt-get update
                 sudo apt-get install \
                 ca-certificates \
